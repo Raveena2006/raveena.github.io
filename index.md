@@ -4,8 +4,6 @@ layout: default
 
 _I was never meant to follow the rules — I was meant to understand them._
 
-**An ~~engineer~~ by degree, a `hacker` by instinct.**
-
 [Link to another page](./another-page.html).
 
 # Header 1
