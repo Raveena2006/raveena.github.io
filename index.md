@@ -19,8 +19,8 @@ _I was never meant to follow the rules — I was meant to understand them._
 <div id="contactPopup" class="popup">
   <div class="popup-content">
     <span class="close-btn">&times;</span>
-    <p>Email ID - pagemarker.06@gmail.com</p>
-    <p>LinkedIn ID - <a href="https://linkedin.com/in/raveena-s-4aa58528a" target="_blank">linkedin.com/in/raveena-s-4aa58528a</a></p>
+    <p><span class="label">Email ID -</span> <span class="info">pagemarker.06@gmail.com</span></p>
+    <p><span class="label">LinkedIn ID -</span> <span class="info"><a href="https://linkedin.com/in/raveena-s-4aa58528a" target="_blank">linkedin.com/in/raveena-s-4aa58528a</a></span></p>
   </div>
 </div>
 
@@ -53,6 +53,7 @@ _I was never meant to follow the rules — I was meant to understand them._
 }
 .popup-content {
   text-align: center;
+  position: relative;
 }
 .close-btn {
   position: absolute;
@@ -60,6 +61,13 @@ _I was never meant to follow the rules — I was meant to understand them._
   right: 15px;
   cursor: pointer;
   font-size: 20px;
+}
+.label {
+  color: green;
+  font-weight: bold;
+}
+.info {
+  color: black;
 }
 </style>
 
