@@ -2,11 +2,11 @@
 layout: default
 ---
 
-_I was never meant to follow the rules — I was meant to understand them._
+# _I was never meant to follow the rules — I was meant to understand them._
 
 [Link to another page](./another-page.html).
 
-# About Me
+## About Me
 
 > I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident  response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
 > 
