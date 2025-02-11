@@ -4,13 +4,35 @@ layout: default
 
 _I was never meant to follow the rules — I was meant to understand them._
 
-<!-- Contact Button -->
-<button onclick="openPopup()" class="px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded-lg shadow-lg text-lg font-semibold transition duration-300 flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 10V3a2 2 0 00-2-2H5a2 2 0 00-2 2v7m18 0h-6m6 0l-9 9-9-9m18 0v4m-18 0v-4" />
+<!-- Contact Me Button & Quote -->
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <em style="font-size: 1.2em;">I was never meant to follow the rules — I was meant to understand them.</em>
+  <button onclick="openPopup()" style="background-color: #2ecc71; border: none; padding: 10px 20px; color: white; font-size: 16px; border-radius: 5px; cursor: pointer; font-weight: bold; display: flex; align-items: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" style="margin-right: 8px;">
+      <path d="M8.5 1.5A1.5 1.5 0 0 0 7 3v5H5.5a1.5 1.5 0 0 0-1.415 2H1.5a.5.5 0 0 0 0 1h2.585A1.5 1.5 0 0 0 5.5 12H7v5a.5.5 0 0 0 1 0v-5h1.5a1.5 1.5 0 0 0 1.415-2h2.585a.5.5 0 0 0 0-1h-2.585A1.5 1.5 0 0 0 8.5 8H7V3a.5.5 0 0 0-.5-.5z"/>
     </svg>
     Contact Me
-</button>
+  </button>
+</div>
+
+<!-- Contact Popup -->
+<div id="contactPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #333; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5); color: white; max-width: 300px;">
+  <h3>Contact Me</h3>
+  <p><strong>Email:</strong> your.email@example.com</p>
+  <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: #2ecc71;">linkedin.com/in/yourprofile</a></p>
+  <button onclick="closePopup()" style="background: red; border: none; padding: 5px 10px; color: white; font-weight: bold; border-radius: 5px; cursor: pointer;">×</button>
+</div>
+
+<!-- JavaScript for Popup -->
+<script>
+function openPopup() {
+  document.getElementById('contactPopup').style.display = 'block';
+}
+function closePopup() {
+  document.getElementById('contactPopup').style.display = 'none';
+}
+</script>
+
 
 [Link to another page](./another-page.html).
 
