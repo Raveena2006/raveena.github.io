@@ -2,19 +2,7 @@
 layout: default
 ---
 
-_I was never meant to follow the rules — I was meant to understand them._
-
-[Link to another page](./another-page.html).
-
-## About Me
-
-> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident  response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
-> 
-> I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
-> 
-> _Let’s connect and work towards a more secure digital future._
-
-<button id="contactBtn" class="contact-button">Contact Me</button>
+_I was never meant to follow the rules — I was meant to understand them._  <button id="contactBtn" class="contact-button">Contact Me</button>
 
 <div id="contactPopup" class="popup">
   <div class="popup-content">
@@ -80,6 +68,16 @@ document.querySelector(".close-btn").addEventListener("click", function() {
   document.getElementById("contactPopup").style.display = "none";
 });
 </script>
+
+
+
+## About Me
+
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident  response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> 
+> I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
+> 
+> _Let’s connect and work towards a more secure digital future._
 
 ## Skills and Technologies
 
