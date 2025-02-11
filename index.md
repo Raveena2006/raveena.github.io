@@ -38,22 +38,33 @@ _I was never meant to follow the rules — I was meant to understand them._  <bu
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   z-index: 1000;
+  width: 350px; /* Adjust width if needed */
 }
+
 .popup-content {
   text-align: center;
   position: relative;
 }
+
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 8px;
+  right: 12px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: green; /* Close button in green */
 }
+
+.close-btn:hover {
+  color: darkgreen; /* Darker green on hover */
+}
+
 .label {
   color: green;
   font-weight: bold;
 }
+
 .info {
   color: black;
 }
@@ -69,11 +80,9 @@ document.querySelector(".close-btn").addEventListener("click", function() {
 });
 </script>
 
-
-
 ## About Me
 
-> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident  response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
 > 
 > I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
 > 
