@@ -106,6 +106,8 @@ document.querySelector(".close-btn").addEventListener("click", function() {
   document.getElementById("contactPopup").style.display = "none";
 });
 
+_The command line knows me—can you?_
+  
 const terminalOutput = document.getElementById("terminal-output");
 const terminalInput = document.getElementById("terminal-input");
 
