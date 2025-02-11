@@ -6,9 +6,13 @@ _I was never meant to follow the rules — I was meant to understand them._
 
 [Link to another page](./another-page.html).
 
-# Header 1
+# About Me
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident > response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> 
+> I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
+> 
+> _Let’s connect and work towards a more secure digital future._
 
 ## Header 2
 
