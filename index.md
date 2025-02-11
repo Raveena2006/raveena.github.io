@@ -14,14 +14,11 @@ _I was never meant to follow the rules — I was meant to understand them._
 > 
 > _Let’s connect and work towards a more secure digital future._
 
-## Contact Me
-
-<button id="contactBtn">Contact Me</button>
+<button id="contactBtn" class="contact-button">Contact Me</button>
 
 <div id="contactPopup" class="popup">
   <div class="popup-content">
     <span class="close-btn">&times;</span>
-    <h2>Contact Me</h2>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
@@ -38,6 +35,20 @@ _I was never meant to follow the rules — I was meant to understand them._
 </div>
 
 <style>
+.contact-button {
+  background-color: #32CD32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-button:hover {
+  background-color: #228B22;
+}
+
 .popup {
   display: none;
   position: fixed;
