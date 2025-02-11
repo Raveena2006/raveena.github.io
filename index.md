@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# _I was never meant to follow the rules — I was meant to understand them._
+** _I was never meant to follow the rules — I was meant to understand them._**
 
 [Link to another page](./another-page.html).
 
