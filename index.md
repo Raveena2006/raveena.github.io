@@ -8,7 +8,7 @@ _I was never meant to follow the rules — I was meant to understand them._
 
 # About Me
 
-> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident > response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident  response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
 > 
 > I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
 > 
