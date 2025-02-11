@@ -14,6 +14,11 @@ _I was never meant to follow the rules — I was meant to understand them._   <b
   </div>
 </div>
 
+<div id="terminal-container">
+  <div id="terminal-output"></div>
+  <input type="text" id="terminal-input" autofocus>
+</div>
+
 <style>
 .contact-button {
   background-color: #32CD32;
@@ -24,11 +29,9 @@ _I was never meant to follow the rules — I was meant to understand them._   <b
   cursor: pointer;
   font-size: 16px;
 }
-
 .contact-button:hover {
   background-color: #228B22;
 }
-
 .popup {
   display: none;
   position: fixed;
@@ -42,12 +45,10 @@ _I was never meant to follow the rules — I was meant to understand them._   <b
   z-index: 1000;
   width: 350px;
 }
-
 .popup-content {
   position: relative;
   padding-top: 10px;
 }
-
 .close-btn {
   position: absolute;
   top: 5px;
@@ -57,21 +58,42 @@ _I was never meant to follow the rules — I was meant to understand them._   <b
   font-weight: bold;
   color: green;
 }
-
 .close-btn:hover {
   color: darkgreen;
 }
-
 .label {
   color: green;
   font-weight: bold;
   display: block;
   margin-top: 15px;
 }
-
 .info {
   color: black;
   display: block;
+}
+#terminal-container {
+  background-color: black;
+  color: green;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 5px;
+  width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+#terminal-output {
+  min-height: 250px;
+  white-space: pre-wrap;
+}
+#terminal-input {
+  width: 100%;
+  background: white;
+  color: black;
+  border: none;
+  padding: 5px;
+  font-family: monospace;
+  outline: none;
 }
 </style>
 
@@ -82,6 +104,31 @@ document.getElementById("contactBtn").addEventListener("click", function() {
 
 document.querySelector(".close-btn").addEventListener("click", function() {
   document.getElementById("contactPopup").style.display = "none";
+});
+
+const terminalOutput = document.getElementById("terminal-output");
+const terminalInput = document.getElementById("terminal-input");
+
+const commands = {
+  "whoami": "raveena",
+  "pwd": "/home/raveena",
+  "ls": "about-me  skills  projects  certificates  write-ups",
+  "ls about-me": "I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in defensive security, threat detection, and incident response. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments."
+};
+
+terminalInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const command = terminalInput.value;
+    terminalOutput.innerHTML += `\n> ${command}\n`;
+    if (commands[command]) {
+      terminalOutput.innerHTML += commands[command] + "\n";
+    } else {
+      terminalOutput.innerHTML += "Command not found\n";
+    }
+    terminalInput.value = "";
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  }
 });
 </script>
 
