@@ -2,13 +2,16 @@
 layout: default
 ---
 
-_I was never meant to follow the rules — I was meant to understand them._  <button id="contactBtn" class="contact-button">Contact Me</button>
+_I was never meant to follow the rules — I was meant to understand them._  
+<button id="contactBtn" class="contact-button">Contact Me</button>
 
 <div id="contactPopup" class="popup">
   <div class="popup-content">
     <span class="close-btn">&times;</span>
     <p><span class="label">Email ID -</span> <span class="info">pagemarker.06@gmail.com</span></p>
-    <p><span class="label">LinkedIn ID -</span> <span class="info"><a href="https://linkedin.com/in/raveena-s-4aa58528a" target="_blank">linkedin.com/in/raveena-s-4aa58528a</a></span></p>
+    <p><span class="label">LinkedIn ID -</span> <span class="info">
+      <a href="https://linkedin.com/in/raveena-s-4aa58528a" target="_blank">linkedin.com/in/raveena-s-4aa58528a</a>
+    </span></p>
   </div>
 </div>
 
@@ -38,35 +41,38 @@ _I was never meant to follow the rules — I was meant to understand them._  <bu
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   z-index: 1000;
-  width: 350px; /* Adjust width if needed */
+  width: 350px;
 }
 
 .popup-content {
-  text-align: center;
   position: relative;
+  padding-top: 10px;
 }
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 12px;
+  top: 5px;
+  right: 10px;
   cursor: pointer;
   font-size: 22px;
   font-weight: bold;
-  color: green; /* Close button in green */
+  color: green;
 }
 
 .close-btn:hover {
-  color: darkgreen; /* Darker green on hover */
+  color: darkgreen;
 }
 
 .label {
   color: green;
   font-weight: bold;
+  display: block;
+  margin-top: 15px;
 }
 
 .info {
   color: black;
+  display: block;
 }
 </style>
 
