@@ -2,8 +2,7 @@
 layout: default
 ---
 
-_I was never meant to follow the rules — I was meant to understand them._  
-<button id="contactBtn" class="contact-button">Contact Me</button>
+_I was never meant to follow the rules — I was meant to understand them._   <button id="contactBtn" class="contact-button">Contact Me</button>
 
 <div id="contactPopup" class="popup">
   <div class="popup-content">
