@@ -143,14 +143,14 @@ terminalInput.addEventListener("keypress", function(event) {
 
 ## 🛠 Skills and Technologies
 
-###  Programming Languages:
-C, C++, Python, HTML, CSS, SQL  
-
-###  Cybersecurity Tools:
-Kali Linux, Wireshark  
-
-###  Other Skills:
-Communication, Problem-Solving, Logical Thinking  
+> ###  Programming Languages:
+> C, C++, Python, HTML, CSS, SQL  
+>
+> ###  Cybersecurity Tools:
+> Kali Linux, Wireshark  
+>
+> ###  Other Skills:
+> Communication, Problem-Solving, Logical Thinking  
 
 
 ## 🚀 Projects
@@ -172,7 +172,7 @@ Cybersecurity Homelab
 🔹 **[Creeper Virus: The OG Malware Who Was All Talk, No Action](https://medium.com/@greyish_/understanding-the-creeper-virus-the-first-computer-virus-explained-c65c8200e393)**  
 > A breakdown of the world's first computer virus, how it spread, and why it was more of an experiment than a real threat.  
 
-🔹 **[Reaper Virus: The Original ‘Good Guy’ Program That Proved Fighting Fire with Fire Is a Timeless Tech Strategy](https://medium.com/@greyish_/reaper-virus-proof-that-even-in-1971-solving-a-problem-meant-creating-another-one-4596fc22d635)**  
+🔹 **[Reaper Virus: Proved Fighting Fire with Fire Is a Timeless Tech Strategy](https://medium.com/@greyish_/reaper-virus-proof-that-even-in-1971-solving-a-problem-meant-creating-another-one-4596fc22d635)**  
 > The story of the first "antivirus" program, how it hunted Creeper, and what it taught us about early cybersecurity.  
 
 🔹 **[The Wabbit Virus: Code of Destruction That Brought Giants to Their Knees](https://medium.com/@greyish_/code-of-destruction-the-rabbit-virus-that-brought-giants-to-their-knees-69c3cb60840b)**  
