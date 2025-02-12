@@ -2,122 +2,186 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+_The command line knows me—can you?_   <button id="contactBtn" class="contact-button">Contact Me</button>
 
-[Link to another page](./another-page.html).
+<div id="contactPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <p><span class="label">Email ID -</span> <span class="info">pagemarker.06@gmail.com</span></p>
+    <p><span class="label">LinkedIn ID -</span> <span class="info">
+      <a href="https://linkedin.com/in/raveena-s-4aa58528a" target="_blank">linkedin.com/in/raveena-s-4aa58528a</a>
+    </span></p>
+  </div>
+</div>
 
-There should be whitespace between paragraphs.
+<div id="terminal-container">
+  <div id="terminal-output"></div>
+  <input type="text" id="terminal-input" autofocus>
+</div>
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+<style>
+.contact-button {
+  background-color: #32CD32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
+.contact-button:hover {
+  background-color: #228B22;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  width: 350px;
+}
+.popup-content {
+  position: relative;
+  padding-top: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
+}
+.close-btn:hover {
+  color: darkgreen;
+}
+.label {
+  color: green;
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+.info {
+  color: black;
+  display: block;
+}
+#terminal-container {
+  background-color: black;
+  color: green;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 5px;
+  width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+#terminal-output {
+  min-height: 250px;
+  white-space: pre-wrap;
+}
+#terminal-input {
+  width: 100%;
+  background: white;
+  color: black;
+  border: none;
+  padding: 5px;
+  font-family: monospace;
+  outline: none;
+}
+</style>
+
+<script>
+document.getElementById("contactBtn").addEventListener("click", function() {
+  document.getElementById("contactPopup").style.display = "block";
+});
+
+document.querySelector(".close-btn").addEventListener("click", function() {
+  document.getElementById("contactPopup").style.display = "none";
+});
+
+const terminalOutput = document.getElementById("terminal-output");
+const terminalInput = document.getElementById("terminal-input");
+
+const commands = {
+  "whoami": "raveena",
+  "pwd": "/home/raveena",
+  "ls": "about-me  skills  projects  certificates  write-ups",
+  "ls about-me": "I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in defensive security, threat detection, and incident response. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments."
+};
+
+terminalInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    const command = terminalInput.value;
+    terminalOutput.innerHTML += `\n> ${command}\n`;
+    if (commands[command]) {
+      terminalOutput.innerHTML += commands[command] + "\n";
+    } else {
+      terminalOutput.innerHTML += "Command not found\n";
+    }
+    terminalInput.value = "";
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+  }
+});
+</script>
+
+## About Me
+
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> 
+> I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
+> 
+> _Let’s connect and work towards a more secure digital future._
+
+---
+
+## 🛠 Skills and Technologies
+
+###  Programming Languages:
+- C, C++, Python, HTML, CSS, SQL  
+
+###  Cybersecurity Tools:
+- Kali Linux, Wireshark  
+
+###  Other Skills:
+- Communication, Problem-Solving, Logical Thinking  
+
+---
+
+## 🚀 Projects
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+- **Cybersecurity Homelab**  
 ```
+---
 
-#### Header 4
+## 🎓 Certificates and Courses
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+| **Certificate Name** | **Provider** |
+|----------------------|-------------|
+| [Google Professional Cybersecurity Certificate](https://www.coursera.org/account/accomplishments/professional-cert/GPUHYM1JXK2D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof) | Coursera |
+| **Computer Network and Network Security (Placeholder)** | NPTEL |
+| **Cybersecurity Architecture (Placeholder)** | Coursera |
 
-##### Header 5
+---
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
+## ✍ Write-ups  
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+🔹 **[Creeper Virus: The OG Malware Who Was All Talk, No Action](https://medium.com/@greyish_/understanding-the-creeper-virus-the-first-computer-virus-explained-c65c8200e393)**  
+> A breakdown of the world's first computer virus, how it spread, and why it was more of an experiment than a real threat.  
 
-```
-The final element.
+🔹 **[Reaper Virus: The Original ‘Good Guy’ Program That Proved Fighting Fire with Fire Is a Timeless Tech Strategy](https://medium.com/@greyish_/reaper-virus-proof-that-even-in-1971-solving-a-problem-meant-creating-another-one-4596fc22d635)**  
+> The story of the first "antivirus" program, how it hunted Creeper, and what it taught us about early cybersecurity.  
+
+🔹 **[The Wabbit Virus: Code of Destruction That Brought Giants to Their Knees](https://medium.com/@greyish_/code-of-destruction-the-rabbit-virus-that-brought-giants-to-their-knees-69c3cb60840b)**  
+> An exploration of Wabbit, a self-replicating virus that caused massive system crashes through resource exhaustion.  
+
+---
 ```
