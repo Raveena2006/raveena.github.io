@@ -195,3 +195,51 @@ terminalInput.addEventListener("keypress", function(event) {
   }
 });
 </script>
+
+## About Me
+
+> I am a cybersecurity enthusiast and a second-year electrical engineering student with a strong interest in `defensive security, threat detection, and incident response`. I enjoy analyzing security risks, mitigating threats, and enhancing system defenses to protect digital environments.
+> 
+> I am open to internships, apprenticeship roles, and weekend jobs in cybersecurity defense to gain hands-on experience and contribute to security operations.
+> 
+> _Let’s connect and work towards a more secure digital future._
+
+
+## 🛠 Skills and Technologies
+
+###  Programming Languages:
+C, C++, Python, HTML, CSS, SQL  
+
+###  Cybersecurity Tools:
+Kali Linux, Wireshark  
+
+###  Other Skills:
+Communication, Problem-Solving, Logical Thinking  
+
+
+## 🚀 Projects
+```
+Cybersecurity Homelab  
+
+```
+## 🎓 Certificates and Courses
+
+| **Certificate Name** | **Provider** |
+|----------------------|-------------|
+| [Google Professional Cybersecurity Certificate](https://www.coursera.org/account/accomplishments/professional-cert/GPUHYM1JXK2D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof) | Coursera |
+| **Computer Network and Network Security (Placeholder)** | NPTEL |
+| **Cybersecurity Architecture (Placeholder)** | Coursera |
+
+
+## ✍ Write-ups  
+
+🔹 **[Creeper Virus: The OG Malware Who Was All Talk, No Action](https://medium.com/@greyish_/understanding-the-creeper-virus-the-first-computer-virus-explained-c65c8200e393)**  
+> A breakdown of the world's first computer virus, how it spread, and why it was more of an experiment than a real threat.  
+
+🔹 **[Reaper Virus: The Original ‘Good Guy’ Program That Proved Fighting Fire with Fire Is a Timeless Tech Strategy](https://medium.com/@greyish_/reaper-virus-proof-that-even-in-1971-solving-a-problem-meant-creating-another-one-4596fc22d635)**  
+> The story of the first "antivirus" program, how it hunted Creeper, and what it taught us about early cybersecurity.  
+
+🔹 **[The Wabbit Virus: Code of Destruction That Brought Giants to Their Knees](https://medium.com/@greyish_/code-of-destruction-the-rabbit-virus-that-brought-giants-to-their-knees-69c3cb60840b)**  
+> An exploration of Wabbit, a self-replicating virus that caused massive system crashes through resource exhaustion.  
+
+---
