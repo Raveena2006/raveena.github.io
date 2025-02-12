@@ -105,14 +105,13 @@ document.getElementById("contactBtn").addEventListener("click", function() {
 document.querySelector(".close-btn").addEventListener("click", function() {
   document.getElementById("contactPopup").style.display = "none";
 });
-
 const terminalOutput = document.getElementById("terminal-output");
 const terminalInput = document.getElementById("terminal-input");
 
 let currentDirectory = "/home/raveena";
+
 const directories = {
   "/home/raveena": ["about-me", "skills", "projects", "certificates", "write-ups"],
-  "/home/raveena/about-me": [],
   "/home/raveena/skills": ["programming", "cybersecurity-tools", "other-skills"],
   "/home/raveena/projects": ["cybersecurity-homelab"],
   "/home/raveena/certificates": ["Google Professional Cybersecurity", "Computer Network and Security"],
@@ -121,13 +120,13 @@ const directories = {
 
 const files = {
   "about-me": "I am a cybersecurity enthusiast and a second-year electrical engineering student...",
-  "skills/programming": "C, C++, Python, HTML, CSS, SQL",
-  "skills/cybersecurity-tools": "Kali Linux, Wireshark",
-  "skills/other-skills": "Communication, Problem-Solving, Logical Thinking",
-  "projects/cybersecurity-homelab": "Cybersecurity Homelab project details...",
+  "skills/programming": "• C\n• C++\n• Python\n• HTML\n• CSS\n• SQL",
+  "skills/cybersecurity-tools": "• Kali Linux\n• Wireshark",
+  "skills/other-skills": "• Communication\n• Problem-Solving\n• Logical Thinking",
+  "projects/cybersecurity-homelab": "• Cybersecurity Homelab project details...",
   "certificates/Google Professional Cybersecurity": "Google Professional Cybersecurity Certificate - Coursera",
   "certificates/Computer Network and Security": "NPTEL Computer Network and Network Security",
-  "write-ups/creeper-virus": "Understanding the Creeper Virus...",
+  "write-ups/creeper-virus": "Creeper Virus: The first known computer virus...",
   "write-ups/reaper-virus": "Reaper Virus: The First Good Guy Program...",
   "write-ups/wabbit-virus": "Code of Destruction: The Wabbit Virus..."
 };
@@ -141,20 +140,49 @@ function executeCommand(command) {
     case "whoami":
       output = "raveena";
       break;
+
     case "pwd":
-      output = currentDirectory;
+      output = "home/raveena";
       break;
+
     case "ls":
-      output = directories[currentDirectory] ? directories[currentDirectory].join("  ") : "";
+      if (args.length === 1) {
+        // List files in the current directory
+        output = directories[currentDirectory] ? directories[currentDirectory].join("  ") : "No files";
+      } else {
+        const dirToList = args[1] === "skills" ? "/home/raveena/skills" :
+                          args[1] === "projects" ? "/home/raveena/projects" :
+                          args[1] === "certificates" ? "/home/raveena/certificates" :
+                          args[1] === "write-ups" ? "/home/raveena/write-ups" :
+                          null;
+
+        if (dirToList && directories[dirToList]) {
+          if (args[1] === "skills" || args[1] === "projects") {
+            output = directories[dirToList].map(skill => `• ${skill}`).join("\n");
+          } else if (args[1] === "certificates") {
+            output = `| Certificate Name | Platform |\n|-----------------|-----------|\n` +
+              directories[dirToList].map(cert => `| ${cert} | Online |`).join("\n");
+          } else if (args[1] === "write-ups") {
+            output = directories[dirToList].join("\n");
+          } else {
+            output = directories[dirToList].join("  ");
+          }
+        } else {
+          output = `ls: cannot access '${args[1]}': No such directory`;
+        }
+      }
       break;
+
     case "cd":
       if (args.length > 1) {
-        const newPath = args[1] === ".." 
-          ? currentDirectory.substring(0, currentDirectory.lastIndexOf("/")) || "/home/raveena" 
+        const newPath = args[1] === ".."
+          ? currentDirectory.substring(0, currentDirectory.lastIndexOf("/")) || "/home/raveena"
           : currentDirectory + "/" + args[1];
 
         if (directories[newPath]) {
           currentDirectory = newPath;
+        } else if (files[args[1]]) {
+          output = `cd: '${args[1]}' is a file, not a directory`;
         } else {
           output = `cd: no such file or directory: ${args[1]}`;
         }
@@ -162,6 +190,7 @@ function executeCommand(command) {
         output = "cd: missing argument";
       }
       break;
+
     case "cat":
       if (args.length > 1) {
         const filePath = args[1].includes("/") ? args[1] : currentDirectory.replace("/home/raveena/", "") + "/" + args[1];
@@ -170,15 +199,19 @@ function executeCommand(command) {
         output = "cat: missing argument";
       }
       break;
+
     case "echo":
       output = args.slice(1).join(" ");
       break;
+
     case "clear":
       terminalOutput.innerHTML = "";
       return;
+
     case "help":
       output = "Available commands: whoami, pwd, ls, cd, cat, echo, clear, help";
       break;
+
     default:
       output = "Command not found";
   }
@@ -194,6 +227,7 @@ terminalInput.addEventListener("keypress", function(event) {
     executeCommand(terminalInput.value.trim());
   }
 });
+
 </script>
 
 ## About Me
