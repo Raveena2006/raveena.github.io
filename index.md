@@ -192,17 +192,23 @@ function executeCommand(command) {
       break;
 
     case "cat":
-      if (args.length > 1) {
-        const filePath = args[1].includes("/") ? args[1] : currentDirectory.replace("/home/raveena/", "") + "/" + args[1];
-        output = files[filePath] || `cat: ${args[1]}: No such file`;
-      } else {
-        output = "cat: missing argument";
-      }
-      break;
+    if (args.length > 1) {
+        const fileName = args[1];
+        
+        // Check if the file exists in the current directory
+        const filePath = currentDirectory === "/home/raveena" 
+            ? fileName // If in home directory, check directly
+            : currentDirectory.replace("/home/raveena/", "") + "/" + fileName;
 
-    case "echo":
-      output = args.slice(1).join(" ");
-      break;
+        if (files[filePath]) {
+            output = files[filePath];
+        } else {
+            output = `cat: ${fileName}: No such file`;
+        }
+    } else {
+        output = "cat: missing argument";
+    }
+    break;
 
     case "clear":
       terminalOutput.innerHTML = "";
