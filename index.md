@@ -247,14 +247,14 @@ terminalInput.addEventListener("keypress", function(event) {
 
 ## 🛠 Skills and Technologies
 
-###  Programming Languages:
-C, C++, Python, HTML, CSS, SQL  
-
-###  Cybersecurity Tools:
-Kali Linux, Wireshark  
-
-###  Other Skills:
-Communication, Problem-Solving, Logical Thinking  
+> ###  Programming Languages:
+> C, C++, Python, HTML, CSS, SQL  
+>
+> ###  Cybersecurity Tools:
+> Kali Linux, Wireshark  
+>
+> ###  Other Skills:
+> Communication, Problem-Solving, Logical Thinking  
 
 
 ## 🚀 Projects
