@@ -140,28 +140,24 @@ terminalInput.addEventListener("keypress", function(event) {
 > 
 > _Let’s connect and work towards a more secure digital future._
 
----
 
 ## 🛠 Skills and Technologies
 
 ###  Programming Languages:
-- C, C++, Python, HTML, CSS, SQL  
+C, C++, Python, HTML, CSS, SQL  
 
 ###  Cybersecurity Tools:
-- Kali Linux, Wireshark  
+Kali Linux, Wireshark  
 
 ###  Other Skills:
-- Communication, Problem-Solving, Logical Thinking  
+Communication, Problem-Solving, Logical Thinking  
 
----
 
 ## 🚀 Projects
 ```
+Cybersecurity Homelab  
 
-- **Cybersecurity Homelab**  
 ```
----
-
 ## 🎓 Certificates and Courses
 
 | **Certificate Name** | **Provider** |
@@ -170,10 +166,9 @@ terminalInput.addEventListener("keypress", function(event) {
 | **Computer Network and Network Security (Placeholder)** | NPTEL |
 | **Cybersecurity Architecture (Placeholder)** | Coursera |
 
----
 
 ## ✍ Write-ups  
-```
+
 🔹 **[Creeper Virus: The OG Malware Who Was All Talk, No Action](https://medium.com/@greyish_/understanding-the-creeper-virus-the-first-computer-virus-explained-c65c8200e393)**  
 > A breakdown of the world's first computer virus, how it spread, and why it was more of an experiment than a real threat.  
 
@@ -184,4 +179,3 @@ terminalInput.addEventListener("keypress", function(event) {
 > An exploration of Wabbit, a self-replicating virus that caused massive system crashes through resource exhaustion.  
 
 ---
-```
